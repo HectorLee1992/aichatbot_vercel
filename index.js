@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 const BASE_URL = "https://oneapi.zhx47.top:8888/v1/chat/completions";
-const API_KEY = "sk-DXDprOXgUFv1Tsb5QBHr8jzBFVpMvZgWfGI1sKkq5I75f14b";
+const API_KEY = "";
 
 // Chatwoot webhook endpoint
 app.post("/webhook", async (req, res) => {
