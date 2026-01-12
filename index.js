@@ -26,7 +26,7 @@ app.post("/webhook", async (req, res) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo", // 或者你 API 支援的模型名稱
+        model: "gpt-4o-mini", // 或者你 API 支援的模型名稱
         messages: [{ role: "user", content: message }]
       })
     });
