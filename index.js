@@ -14,7 +14,9 @@ const CHATWOOT_BASE = "https://app.chatwoot.com";   // SaaS 版 Chatwoot 網域
 
 app.post("/webhook", async (req, res) => {
   try {
-    const message = req.body?.content;
+    // 去掉 HTML 標籤，只保留純文字
+    const rawMessage = req.body?.content || "";
+    const message = rawMessage.replace(/<[^>]+>/g, "").trim();
     const conversationId = req.body?.conversation?.id;
     const accountId = req.body?.account?.id;
 
